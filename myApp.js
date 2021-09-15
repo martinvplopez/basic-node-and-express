@@ -33,6 +33,11 @@ app.get("/json", (req,res)=>{
 app.use("/public", express.static(__dirname + "/public"));
 
 
+app.get("/:word/echo", (req,res)=>{
+    res.json({echo: req.params.word});
+});
+
+
 
 
 
