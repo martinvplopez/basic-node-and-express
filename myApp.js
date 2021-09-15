@@ -1,10 +1,10 @@
 var express = require('express');
 var app = express();
+require('dotenv').config();
 console.log("Hello World");
-let path= __dirname + "/views/index.html"
 
 app.get("/", (req,res)=>{
-    res.sendFile(path);
+    res.sendFile(__dirname + "/views/index.html");
 });
 
 app.get("/json", (req,res)=>{
