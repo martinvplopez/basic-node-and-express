@@ -9,7 +9,7 @@ app.use("/", (req, res, next)=>{
 });
 
 app.get("/now", (req,res,next)=>{
-    req.time=Date.now().toString();
+    req.time=new Date().toString();
     next();
 },function(req,res){
     res.send({time: req.time});
