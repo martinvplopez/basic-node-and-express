@@ -38,7 +38,7 @@ app.get("/:word/echo", (req,res)=>{
 });
 
 app.get("/name",(req,res)=>{
-    res.send({name: `${req.query.first} ${req.query.last} `});
+    res.send({name: `${req.query.first} ${req.query.last}`});
 });
 
 
